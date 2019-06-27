@@ -31,7 +31,7 @@ switch (liriArgument) {
             "Please make sure the movie or song name is in quotation marks if it is more than one word!")
 };
 
-// Bands in Town function
+// This will render the Bands in Town function
 function concertThis(subject) {
     var queryURL = "https://rest.bandsintown.com/artists/" + subject + "/events?app_id=codingbootcamp";
 
@@ -46,7 +46,7 @@ function concertThis(subject) {
         })
 };
 
-// Spotify function
+// This will render the Spotify function
 function spotifyThisSong(songName) {
     if (!songName) {
         songName = "The Sign by Ace of Base";
@@ -73,7 +73,7 @@ function spotifyThisSong(songName) {
     });
 };
 
-// Movie function
+// This will render the Movie function
 function movieThis(movie) {
     if (movie === '') {
         request("http://www.omdbapi.com/?t='mr+nobody'&y=&plot=short&apikey=trilogy", function (error, response, body) {
