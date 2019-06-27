@@ -39,7 +39,7 @@ function concertThis(subject) {
         .then(function (response) {
             if (response.status == 200) {
                 let data = response.data[0];
-                console.log("Venue name: " + data.venue.name +
+                console.log("Name of the venue: " + data.venue.name +
                     "\nVenue location: " + data.venue.city +
                     "\nDate of Event: " + moment(data.datetime).format("MM/DD/YYYY"));
             }
@@ -59,10 +59,10 @@ function spotifyThisSong(songName) {
         for (var i = 0; i < 5; i++) {
             if (songInfo[i] != undefined) {
                 var spotifyResults =
-                    "Artist: " + songInfo[i].artists[0].name + "\r\n" +
-                    "Song: " + songInfo[i].name + "\r\n" +
-                    "Album the song is from: " + songInfo[i].album.name + "\r\n" +
-                    "Preview URL: " + songInfo[i].preview_url + "\r\n" +
+                    "Artist(s): " + songInfo[i].artists[0].name + "\r\n" +
+                    "The song's name: " + songInfo[i].name + "\r\n" +
+                    "A preview link of the song: " + songInfo[i].preview_url + "\r\n" +
+                    "The album the song is from: " + songInfo[i].album.name + "\r\n" +
                     "------------------" + i + "------------------" + "\r\n";
                 console.log(spotifyResults);
             } else {
@@ -84,12 +84,11 @@ function movieThis(movie) {
                     "Title: " + movieObject.Title + "\r\n" +
                     "Year: " + movieObject.Year + "\r\n" +
                     "Imdb Rating: " + movieObject.imdbRating + "\r\n" +
-                    "Country: " + movieObject.Country + "\r\n" +
-                    "Language: " + movieObject.Language + "\r\n" +
-                    "Plot: " + movieObject.Plot + "\r\n" +
-                    "Actors: " + movieObject.Actors + "\r\n" +
                     "Rotten Tomatoes Rating: " + movieObject.tomatoRating + "\r\n" +
-                    "Rotten Tomatoes URL: " + movieObject.tomatoURL + "\r\n" +
+                    "Country of production: " + movieObject.Country + "\r\n" +
+                    "Language: " + movieObject.Language + "\r\n" +
+                    "Plot of the movie: " + movieObject.Plot + "\r\n" +
+                    "Actors in the movie: " + movieObject.Actors + "\r\n" +
                     "------------------------------" + "\r\n";
                 console.log(movieResults);
             } else {
@@ -107,12 +106,11 @@ function movieThis(movie) {
                     "Title: " + movieObject.Title + "\r\n" +
                     "Year: " + movieObject.Year + "\r\n" +
                     "Imdb Rating: " + movieObject.imdbRating + "\r\n" +
-                    "Country: " + movieObject.Country + "\r\n" +
-                    "Language: " + movieObject.Language + "\r\n" +
-                    "Plot: " + movieObject.Plot + "\r\n" +
-                    "Actors: " + movieObject.Actors + "\r\n" +
                     "Rotten Tomatoes Rating: " + movieObject.tomatoRating + "\r\n" +
-                    "Rotten Tomatoes URL: " + movieObject.tomatoURL + "\r\n" +
+                    "Country of production: " + movieObject.Country + "\r\n" +
+                    "Language: " + movieObject.Language + "\r\n" +
+                    "Plot of the movie: " + movieObject.Plot + "\r\n" +
+                    "Actors in the movie: " + movieObject.Actors + "\r\n" +
                     "------------------------------" + "\r\n";
                 console.log(movieResults);
             } else {
